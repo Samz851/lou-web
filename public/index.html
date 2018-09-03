@@ -12,7 +12,9 @@
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet" type="text/css">
 		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<!-- Loading main css file -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/booking-form.css">
 		<script src="https://connect.soundcloud.com/sdk/sdk-3.3.0.js"></script>
 		<script>
 			SC.initialize({
@@ -101,24 +103,20 @@
 						<div class="quote-slider">
 							<ul class="slides">
 								<li>
-									<blockquote>
-										<p>"Private concerts are the norm at many soirees in Saudi households, but Loulwa Al Sharif’s most recent performance in Jeddah was the first to be approved by the General Entertainment Authority."</p>
+									<blockquote class="col-md-8">
+										<p>"Private concerts are the norm at many soirees in Saudi households, but Loulwa Al Sharif’s most recent performance in Jeddah was the first to be approved by the General Entertainment Authority"</p>
 									</blockquote>
+									<div class="qoute-image col-md-4">
+										<img src="images/lulu-qoutes1.jpg" alt="lulu1" />
+									</div>
 								</li>
 								<li>
-									<blockquote>
-										<p>"Restrictions on public entertainment are easing up under Saudi Crown Prince Mohammed Bin Salman’s Vision 2030 plan, and this is coming into full swing after a Jazz festival was held in February, and a public screening of Black Panther in Riyadh ended a 35 year ban on cinemas in Saudi Arabia."</p>
+									<blockquote class="col-md-8">
+										<p>"Restrictions on public entertainment are easing up under Saudi Crown Prince Mohammed Bin Salman’s Vision 2030 plan, and this is coming into full swing after a Jazz festival was held in February"</p>
 									</blockquote>
-								</li>
-								<li>
-									<blockquote>
-										<p>"“The crown prince has taken a great step, as it is something that we have all been waiting for years,” Al Sharif told Gulf News. “Saudi Arabia has a crazy amount of self-taught talent in art, acting and singing. This will now give Saudis a chance to shine and show their talent to the world.”"</p>
-									</blockquote>
-								</li>
-								<li>
-									<blockquote>
-										<p>"Loulwa Al Sharif told the Financial Times, that she had been singing for as long as she can remember but only started singing with a band four years ago. Since then, she has been performing at private events, singing songs by artists like Sade, Adele, Eric Clapton and Carlos Santana and told Gulf News that she got a warm reception at her recent public performance. “I am not doing anything wrong. I am just feeding souls with love and music,” she continued. “Singing takes me to another world, somewhere bright, beautiful and peaceful. When I see people swaying and smiling when I’m singing, I get more passionate and energetic.”"</p>
-									</blockquote>
+									<div class="qoute-image col-md-4">
+										<img src="images/lulu-qoutes2.jpg" alt="lulu1" />
+									</div>
 								</li>
 							</ul>
 						</div>
@@ -160,6 +158,152 @@
 						</div> <!-- .event-carousel -->
 					</div> <!-- .container -->
 				</div> <!-- .upcoming-event-section -->
+
+				<!-- .booking-section -->
+				<div class="fullwidth-block upcoming-event-section" data-bg-color="#191919" if="mybooking">
+					<div class="container">
+						<header class="section-header">
+							<h2 class="section-title">Events & Booking</h2>
+						</header>
+						<div>
+							<div id="overlay"></div>
+	<div class="container calendar">
+		<div class="header">
+			<div class="icon arr prev"></div>
+			<div class="month">May 2014</div>
+			<div class="icon arr next"></div>
+		</div>
+		<table>
+			<tr>
+				<th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+			</tr>
+			<tr>
+				<td class="notCurMonth">29</td><td class="notCurMonth">30</td>
+				<td>1</td><td>2</td><td class="curDay">3</td><td>4</td><td>5</td>
+			</tr>
+			<tr>
+				<td>6</td><td class="holiday">7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
+			</tr>
+			<tr>
+				<td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
+			</tr>
+			<tr>
+				<td>20</td><td>21</td><td>22</td><td class="holiday">23</td><td>24</td><td>25</td><td>26</td>
+			</tr>
+			<tr>
+				<td>27</td><td>28</td><td>29</td><td>30</td>
+				<td class="notCurMonth">1</td><td class="notCurMonth">2</td class="notCurMonth"><td class="notCurMonth">3</td>
+			</tr>
+		</table>
+		<button class="button-big" id="add_event">Add event</button>
+	</div>
+
+
+	<form action="" class="container booking" name="booking">
+		<div class="header">
+			<div>
+
+			</div>
+		</div>
+		
+		<div class="dates" data-type="none">
+			<div class="col-md-6">
+				<label for="event-name">Name</label>
+				<div class="input-text">
+					<input type="text" value="" id="event-name" readonly>
+					<i class="fas fa-user-alt"></i>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<label for="event-phone">Phone</label>
+				<div class="input-text">
+					<input type="tel" value="" id="event-phone" readonly>
+					<i class="fas fa-phone-square"></i>
+				</div>
+			</div>
+			
+			<div class="col-md-6">
+				<label for="event-location">Location</label>
+				<div class="input-text">
+					<input type="text" value="" id="event-location" readonly>
+					<i class="fas fa-map-marked-alt"></i>
+				</div>
+			</div>
+
+			
+			<div class="col-md-6">
+				<label for="event-email">Email</label>
+				<div class="input-text">
+					<input type="email" value="" id="event-email" readonly>
+					<i class="fas fa-at"></i>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<label for="event-date">Date</label>
+				<div class="input-text">
+					<input type="datetime" value="9 July, 2016" id="event-date" readonly>
+					<i class="fas fa-calendar-times calendar-call"></i>
+				</div>
+
+			</div>
+
+			<div class="col-md-6">
+				<label for="event-time">Time</label>
+				<div class="input-text">
+					<input type="time" value="" id="event-time" readonly>
+					<i class="fas fa-clock"></i>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+					<label for="event-hours">Hours</label>
+					<div class="input-text persons">
+						<select name="Hours">
+							<option value="1">1</option>
+							<option value="2" selected="selected">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>   
+						</select>
+						<i class="fas fa-plus-square"></i>
+		
+					</div>
+					<button class="button-big" id="search"><div class="icon"></div>Submit booking </button>
+				</div>
+		</div>
+
+
+
+		
+		<!-- <ul class="persons">
+			<li>
+				<label>Hours</label>
+				<div class="input-text">
+					<select name="Hours">
+						<option value="1">1</option>
+						<option value="2" selected="selected">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>   
+					</select>
+					<div class="icon"></div>
+				</div>
+			</li>
+		</ul> -->
+
+		
+	</form>
+						</div>
+					</div>
+				</div>
+
 			</main> <!-- .main-content -->
 
 			<footer class="site-footer">

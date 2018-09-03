@@ -23,7 +23,7 @@
 		}
 
 		.container{
-			padding: 200px 0;
+			padding-top: 200px;
 			text-align: center;
 		}
 
@@ -99,10 +99,10 @@
 }
 
 .main-content {
-	background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, #1c1816 70%), url(/images/slide-img1.jpg);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position-x: 150px;
+	// background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, #1c1816 70%), url(/images/slide-img.png);
+	// background-repeat: no-repeat;
+	// background-size: contain;
+	// background-position-x: 150px;
 }
 .quote-slider{
 	position: relative;
@@ -114,6 +114,9 @@
 		margin:0;
 		padding-left:0;
 		list-style: none;
+		// max-width: 40%;
+		background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, #1c1816 70%), url(/images/slide-img851.png);
+		
 	}
 
 	blockquote{
@@ -132,6 +135,17 @@
 			@include em(24);
 			font-weight: 100;
 			font-style: normal;
+		}
+	}
+	.qoute-image.col-md-4 {
+		text-align: right;
+
+		img {
+			opacity:0.75;
+			border: 10px solid transparent;
+			box-shadow: 0px 0px 20px white;
+			border-radius: 50%;
+			max-height: 360px;
 		}
 	}
 
